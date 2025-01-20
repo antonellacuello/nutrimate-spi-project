@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMate®</title>
+</head>
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="icon" href="./icons/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/icons/logo.png" alt="Logo do NutriMate">
+            <h1 class="borel-regular">NutriMate®</h1>
+        </div>
+    </header>
+    <div class="tela-1">
+        <div class="main-container">
+            <div class="food-container" id="arroz">
+                <img src="/icons/arroz.png" alt="potinho de arroz" class="food-icon">
+                <h2 class="borel-regular">Arroz (100g)</h2>
+                <p>Carboidratos: 28,2g</p>
+                <p>Proteínas: 2,7g</p>
+                <p>Gorduras: 0,3g</p>
+                <p>Principais Vitaminas: Não possui.</p>
+                <input type="number" id="qtd-arroz" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="feijao">
+                <img src="/icons/feijao.png" alt="feijão fofinho" class="food-icon">
+                <h2 class="borel-regular">Feijão (100g)</h2>
+                <p>Carboidratos: 20g</p>
+                <p>Proteínas: 9g</p>
+                <p>Gorduras: 0,5g</p>
+                <p>Principais Vitaminas: B9</p>
+                <input type="number" id="qtd-feijao" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="pao">
+                <img src="/icons/pao.png" alt="pão fofo" class="food-icon">
+                <h2 class="borel-regular">Pão Francês (100g)</h2>
+                <p>Carboidratos: 50g</p>
+                <p>Proteínas: 9g</p>
+                <p>Gorduras: 2,5g</p>
+                <p>Principais Vitaminas: Não possui.</p>
+                <input type="number" id="qtd-pao" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="laranja">
+                <img src="/icons/laranja.png" alt="laranja sorrindo" class="food-icon">
+                <h2 class="borel-regular">Laranja (100g)</h2>
+                <p>Carboidratos: 11,75g</p>
+                <p>Proteínas: 9,4g</p>
+                <p>Gorduras: 0,12g</p>
+                <p>Principais Vitaminas: C, A</p>
+                <input type="number" id="qtd-laranja" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="carne-bovina">
+                <img src="/icons/bovina.png" alt="carne feliz" class="food-icon">
+                <h2 class="borel-regular">Carne Bovina (100g)</h2>
+                <p>Carboidratos: 0g</p>
+                <p>Proteínas: 26g</p>
+                <p>Gorduras: 20g</p>
+                <p>Principais Vitaminas: Não possui.</p>
+                <input type="number" id="qtd-carne-bovina" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="carne-frango">
+                <img src="/icons/frango.png" alt="coxa de frango amorosa" class="food-icon">
+                <h2 class="borel-regular">Carne de Frango (100g)</h2>
+                <p>Carboidratos: 0g</p>
+                <p>Proteínas: 31g</p>
+                <p>Gorduras: 3,6g</p>
+                <p>Principais Vitaminas: Não possui.</p>
+                <input type="number" id="qtd-carne-frango" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="ovo">
+                <img src="/icons/ovo.png" alt="ovo kawaii" class="food-icon">
+                <h2 class="borel-regular">Ovo (100g)</h2>
+                <p>Carboidratos: 0,72g</p>
+                <p>Proteínas: 13g</p>
+                <p>Gorduras: 10g</p>
+                <p>Principais Vitaminas: B12, D</p>
+                <input type="number" id="qtd-ovo" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="cafe">
+                <img src="/icons/cafe.png" alt="cafezinho" class="food-icon">
+                <h2 class="borel-regular">Café (100g)</h2>
+                <p>Carboidratos: 0g</p>
+                <p>Proteínas: 0g</p>
+                <p>Gorduras: 0g</p>
+                <p>Principais Vitaminas: Não possui.</p>
+                <input type="number" id="qtd-cafe" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="banana">
+                <img src="/icons/banana.png" alt="potinho de banana" class="food-icon">
+                <h2 class="borel-regular">Banana (100g)</h2>
+                <p>Carboidratos: 22,84g</p>
+                <p>Proteínas: 1,09g</p>
+                <p>Gorduras: 0,33g</p>
+                <p>Principais Vitaminas: B6, D</p>
+                <input type="number" id="qtd-banana" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="food-container" id="batata">
+                <img src="/icons/batata.png" alt="batata" class="food-icon">
+                <h2 class="borel-regular">Batata (100g)</h2>
+                <p>Carboidratos: 17,58g</p>
+                <p>Proteínas: 2,02g</p>
+                <p>Gorduras: 0,1g</p>
+                <p>Principais Vitaminas: C</p>
+                <input type="number" id="qtd-batata" placeholder="Digite quantas gramas terá na refeição aqui">
+            </div>
+            <div class="button-visualizacao-container">
+                <input id="button-visualizacao" class="button" type="button" value="Visualização">
+            </div>
+        </div>
+    </div>
+    <div class="tela-2">
+        <h1 class="borel-regular" align="center">Gráficos da Refeição!</h1>
+        <div id="comparacao-alimentos" class="chart-container">
+            <h2 class="borel-regular">Comparação Nutricional por Alimento</h2>
+            <canvas class="stackedBarChart"></canvas>
+        </div>
+        <div id="micronutrientes" class="chart-container">
+            <h2 class="borel-regular">Comparação de Micronutrientes</h2>
+            <canvas class="line-chart"></canvas>
+        </div>
+        <div id="macronutrientes-container">
+            <h2 class="borel-regular" align="center">Proporção de Macronutrientes</h2>
+            <div id="macronutrientes"></div>
+        </div>
+        <div class="meta-diaria-container">
+            <div class="meta-titulo-container">
+                <h1 id="titulo-meta-diaria" class="borel-regular" align="center">Meta Diária!</h1>
+            </div>
+            <div class="inputs-container">
+                <label>Carboidrato (g): <input type="number" class="input-carbo"></label>
+                <label>Proteína (g): <input type="number" class="input-proteina"></label>
+                <label>Gordura (g): <input type="number" class="input-gordura"></label>
+            </div>
+            <div class="button-enviar-meta-container">
+                <input id="button-enviar-meta" class="button" type="button" value="Enviar">
+            </div>
+        </div>
+    </div>
+    <div class="tela-3">
+        <div class="tabela-semana">
+            <div class="button-refeicao-container">
+                <input id="button-refeicao" class="button" type="button" value="Adicionar Refeição">
+            </div>
+            <table>
+                <tr>
+                    <th colspan="4">Refeições da Semana!</th>
+                </tr>
+                <tr>
+                    <th>Dia da Semana</th>
+                    <th>Carboidrato (g)</th>
+                    <th>Proteína (g)</th>
+                    <th>Gordura (g)</th>
+                </tr>
+            </table>
+        </div>
+        <div class="meta-chart-container">
+            <h2 class="borel-regular">Meta Diária em %</h2>
+            <canvas class="line-chart"></canvas>
+        </div>
+    </div>
+    <footer>
+        <p class="borel-regular">Antonella Cuello - 169603</p>
+        <p class="borel-regular">Trabalho Final da disciplina de Sistemas para Internet I</p>
+    </footer>
+</body>
+
+</html>
